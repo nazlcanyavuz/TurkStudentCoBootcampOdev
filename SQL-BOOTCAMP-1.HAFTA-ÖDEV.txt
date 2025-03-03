@@ -1,0 +1,34 @@
+-- Belirli Kolonları Seçme 
+-- Kolonları seçmek için SELECT komutu kullanılır.
+
+select FirstName , LastName, Salary
+from employees;
+
+--DISTINCT Komutu ile Tekrarları Önleme
+--DISTINCT komutu farklı değerleri ekrana getirir ve aşağıdaki gibi kullanılır
+
+select distinct departmentid
+from employees
+
+--Belirli Bir Departmana Ait Çalışanları Listeleme
+--Belirli bir departmanda çalışan kişilerin bilgilerini getirmek için WHERE komutunu kullanabiliriz.
+--Çünkü WHERE komutu belirli bir şarta göre verileri filtreler.
+
+select * from employees
+where departmentid='1';
+
+--Maaşa Göre Sıralama 
+--Çalışanların maaşlarını sıralamak için ORDER BY kullanılır.
+--Eğer maaşları büyükten küçüğe sıralamak istiyorsak DESC kullanılmalıdır.
+--Kullanılmadığı takdirde maaşlar küçükten büyüğe sıralanır.
+
+select * from employees
+order by salary desc;
+
+--Kolonları Birleştirme (Concatenation)
+--Çalışanların FirstName ve LastName alanlarını birleştirmek için concatenation operatörü kullanılır.
+--Bu operatör || şeklindedir. Aşağıdaki gibi kullanılır.
+
+select FirstName ||' '|| LastName
+from employees;
+
